@@ -17,7 +17,7 @@ import com.txurdi.persistencia.model.Libro;
  * SQL trabaja directamente contra la base de datos relacional tablas, registros y campos, mientras que JPQL trabaja con Java clases e instancias.
  * 
  * @author ander
- * @see https://www.tutorialspoint.com/es/jpa/jpa_jpql.htm
+ * @see https://www.arquitecturajava.com/jpa-query-language-objetos-vs-tablas/
  *
  */
 public class ListarLibrosJPQL {
@@ -31,9 +31,19 @@ public class ListarLibrosJPQL {
 		
 		// no hace falta transacciones
 		//em.getTransaction().begin();
-				
 		
-		ArrayList<Libro> libros = (ArrayList<Libro>) em.createQuery("SELECT l FROM Libro l").getResultList();		
+		final String JPQL = "SELECT l FROM Libro l";
+		/*
+		 * Cuando la tabla en la base de datos se denomina Libros .
+		 * Si que es correcta ya que la consulta de JPA nunca hace referencia a una tabla de la base de datos 
+		 * sino a la Entidad del dominio que en nuestro caso de denomina “Libro” por lo tanto es lo que tenemos que poner. 
+		 * Eso sí el framework se encargará del mapeo de forma automática ya que la tabla en la base de datos se denomina Libros . 
+		 *	Este mapeo lo realiza la anotación @Table de la entidad
+		 * 
+		 * */
+		
+		
+		ArrayList<Libro> libros = (ArrayList<Libro>) em.createQuery(JPQL).getResultList();		
 		System.out.println(libros);
 		
 		em.close();

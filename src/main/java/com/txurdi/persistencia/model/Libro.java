@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-@Entity
+@Entity                       // @Entity define que la entidad es persistible contra la base de datos
 @Table(name = "libros")
 
 
