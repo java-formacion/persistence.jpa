@@ -27,8 +27,8 @@ public class ListarLibrosJPQL {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa_pu");
 		EntityManager em = emf.createEntityManager();
-		
-		
+	
+	
 		// no hace falta transacciones
 		//em.getTransaction().begin();
 		

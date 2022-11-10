@@ -15,7 +15,7 @@ import com.txurdi.persistencia.model.Libro;
  */
 public class CrearLibros {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa_pu");
@@ -27,9 +27,18 @@ public class CrearLibros {
 		
 		Libro libro = new Libro("Dime quien soy");
 		Libro libro2 = new Libro("El libro de la selva");
+		Libro libro3 = new Libro("Papillom");
 		
 		em.persist(libro);
 		em.persist(libro2);
+		
+		/*
+		if ( true ) {
+			throw new Exception("Excepcion lanzada a proposito, No deberia guardarse ningun Libro en la bbdd");
+		}
+		*/	
+		
+		em.persist(libro3);
 		
 		
 		em.getTransaction().commit();
