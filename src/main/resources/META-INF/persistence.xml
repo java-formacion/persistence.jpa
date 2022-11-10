@@ -15,6 +15,7 @@
 		
 		<!-- Clases que van a ser persistidas contra la bbdd -->		
 		<class>com.txurdi.persistencia.model.Libro</class>
+		<class>com.txurdi.persistencia.model.Editorial</class>
 		
 		<properties>
 			<!-- propiedes de conexion de la bbdd -->
