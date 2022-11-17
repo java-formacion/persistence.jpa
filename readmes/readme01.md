@@ -4,6 +4,3 @@ Disponemos de dos tablas sin relacionarse
 
 ![diagrama de la base datos](/screenshots/diagrama01.PNG)
 
-## sin barra
-
-![diagrama de la base datos](screenshots/diagrama01.PNG)

@@ -71,7 +71,7 @@ Tenemos dos Entidades ( Editorial y Libro ) pero sin union entre ellas.
 ### TAG 0.2
 
 Creamos la relación de 1 a N, entre Editorial y Libro.
-[Readme del tag](readmes/readme02.md)
+[Readme del tag](/readmes/readme02.md)
 
 
 
