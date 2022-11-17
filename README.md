@@ -13,7 +13,7 @@ Usamos un SGBD de MySQL y driver mysql-connector-java 5.1.46.
 
 No hace falta los scripts de la bbdd porque lo crea Hibernate mediante ORM.
 
-Si que es necesario: crear la base datos llamada **jpa**, intersante mirar el fichero **java/resources/META-INFpersistance.xml**
+Si que es necesario: crear la base datos llamada **jpa**, intersante mirar el fichero **java/resources/META-INF/persistance.xml**
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -60,6 +60,19 @@ Si que es necesario: crear la base datos llamada **jpa**, intersante mirar el fi
 </persistence>
 
 ```
+
+### TAG 0.1
+
+Tenemos dos Entidades ( Editorial y Libro ) pero sin union entre ellas.
+[Readme del tag](/readmes/readme01.md)
+
+
+
+### TAG 0.2
+
+Creamos la relación de 1 a N, entre Editorial y Libro.
+[Readme del tag](readmes/readme02.md)
+
 
 
 
