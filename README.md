@@ -73,6 +73,14 @@ Tenemos dos Entidades ( Editorial y Libro ) pero sin union entre ellas.
 Creamos la relación de 1 a N, entre Editorial y Libro.
 [Readme del tag](/readmes/readme02.md)
 
+### TAG 0.3
+
+Nuevas anotaciones para conseguir que las columnas de nombre sean únicas en la bbdd
+
+```
+	@Column(unique = true)
+	private String nombre;
+```
 
 
 
