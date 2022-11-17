@@ -8,7 +8,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,6 +22,7 @@ public class Editorial  implements Serializable {
 	@GeneratedValue
 	private int id;
 		
+	@Column(unique = true)
 	private String nombre;
 	
 	
@@ -71,5 +71,4 @@ public class Editorial  implements Serializable {
 		return "Editorial [id=" + id + ", nombre=" + nombre + "]";
 	}
 	
-
 }
