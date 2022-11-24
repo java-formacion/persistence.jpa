@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table
@@ -20,6 +21,7 @@ public class Editorial  implements Serializable {
 	
 	@Id
 	@GeneratedValue
+	@NotNull
 	private int id;
 		
 	@Column(unique = true)
@@ -39,6 +41,12 @@ public class Editorial  implements Serializable {
 
 	public Editorial(String nombre) {
 		this();
+		this.nombre = nombre;
+	}
+	
+	public Editorial(int id, String nombre) {
+		this();
+		this.id = 0;
 		this.nombre = nombre;
 	}
 

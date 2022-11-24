@@ -82,6 +82,15 @@ Nuevas anotaciones para conseguir que las columnas de nombre sean únicas en la 
 	private String nombre;
 ```
 
+### TAG 0.4
 
+Usamos la Api de Validaciones de Java en **Libro** y creamos un Junit para testear **LibroTest**
+
+
+```
+	@NotNull
+	@Size(min = 2, max = 255, message = "El nombre debe estar entre 2 y 255 caracteres")
+	private String nombre;
+```
 
 

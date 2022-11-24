@@ -10,6 +10,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.NotFound;
 
 @Entity                       // @Entity define que la entidad es persistible contra la base de datos
 @Table(name = "libros")
@@ -26,11 +32,14 @@ public class Libro  implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@Column(unique = true)
+	@Column(unique = true)	
+	@NotNull
+	@Size(min = 2, max = 255, message = "El nombre debe estar entre 2 y 255 caracteres")
 	private String nombre;
 	
 	@ManyToOne
 	@JoinColumn(name="id_editorial", nullable=false)
+	@Valid // sirve para validar en cascada la Editorial cuando se valida este objeto Libro
 	private Editorial editorial;
 	
 		
